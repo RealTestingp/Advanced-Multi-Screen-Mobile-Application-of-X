@@ -1,14 +1,15 @@
+import UserProfile from "@/components/user-profile";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 
-const home = () => {
+const Home = () => {
 	return (
-		<View>
-			<Text>home</Text>
-		</View>
+		<ScrollView style={styles.container}>
+			<UserProfile />
+		</ScrollView>
 	);
 };
 
-export default home;
+export default Home;
 
 const styles = StyleSheet.create({});
