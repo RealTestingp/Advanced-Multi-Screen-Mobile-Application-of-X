@@ -19,7 +19,7 @@ const CardPost = ({ userName, userHandle, postContent }: AppPostProps) => {
         <View style={styles.avatar}>
           <Text style={styles.avatarInitial}>{userName.charAt(0)}</Text>
         </View>
-        
+
         <View style={styles.content}>
           <View style={styles.header}>
             <Text style={styles.userName}>{userName}</Text>
@@ -44,10 +44,13 @@ const styles = StyleSheet.create({
     gap: 12,
   },
 	avatar: {
-    width: 46,
-    height: 46,
-    borderRadius: 23,
-  },
+  width: 46,
+  height: 46,
+  borderRadius: 23,
+  backgroundColor: "#333",
+  alignItems: "center",
+  justifyContent: "center",
+},
   content: {
     flex: 1,
     gap: 4,
@@ -70,5 +73,10 @@ const styles = StyleSheet.create({
     fontSize: 15,
     lineHeight: 22,
     color: "black",
+  },
+  avatarInitial: {
+    color: "white",
+    fontWeight: "700",
+    fontSize: 17,
   },
 });
