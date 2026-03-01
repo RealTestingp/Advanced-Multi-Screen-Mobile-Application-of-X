@@ -12,10 +12,10 @@ const Home = () => {
 					<Text style={styles.avatarText}>ME</Text>
 				</View>
 				<Text style={styles.logo}>X</Text>
-				<Ionicons name="sparkles-outline" size={22} color="white"/>
+				<Ionicons name="sparkles-outline" size={22} color="white" />
 			</View>
 
-			<ScrollView style={styles.container}>
+			<ScrollView>
 				<UserPost />
 			</ScrollView>
 		</View>
@@ -27,34 +27,34 @@ export default Home;
 const styles = StyleSheet.create({
 	screen: {
 		flex: 1,
-		backgroundColor: theme.colors.bg
+		backgroundColor: theme.colors.bg,
 	},
 	header: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    paddingHorizontal: 16,
-    paddingTop: 52,
-    paddingBottom: 12,
-    borderBottomWidth: 1,
-    borderBottomColor: "#2f3336",
-  },
-  avatar: {
-    width: 34,
-    height: 34,
-    borderRadius: 17,
-    backgroundColor: "#333",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  avatarText: {
-    color: "#fff",
-    fontWeight: "700",
-    fontSize: 14,
-  },
-  logo: {
-    color: "#e7e9ea",
-    fontSize: 22,
-    fontWeight: "800",
-  },
+		flexDirection: "row",
+		alignItems: "center",
+		justifyContent: "space-between",
+		paddingHorizontal: 16,
+		paddingTop: 52,
+		paddingBottom: 12,
+		borderBottomWidth: 1,
+		borderBottomColor: "#2f3336",
+	},
+	avatar: {
+		width: 34,
+		height: 34,
+		borderRadius: 17,
+		backgroundColor: "#333",
+		alignItems: "center",
+		justifyContent: "center",
+	},
+	avatarText: {
+		color: "#fff",
+		fontWeight: "700",
+		fontSize: 14,
+	},
+	logo: {
+		color: "#e7e9ea",
+		fontSize: 22,
+		fontWeight: "800",
+	},
 });
