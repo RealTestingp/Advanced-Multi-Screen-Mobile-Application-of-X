@@ -1,5 +1,5 @@
 import React from "react";
-import { ImageSourcePropType, StyleSheet, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import CardPost from "./card-post";
 
 const UserPost = () => {
@@ -40,4 +40,6 @@ const UserPost = () => {
 
 export default UserPost;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+
+});

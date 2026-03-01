@@ -2,11 +2,11 @@ import { Ionicons } from "@expo/vector-icons";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import React, { useState } from "react";
 import {
-  ScrollView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
+	ScrollView,
+	StyleSheet,
+	Text,
+	TouchableOpacity,
+	View,
 } from "react-native";
 
 export default function PostDetail() {
@@ -22,13 +22,13 @@ export default function PostDetail() {
 	const dateString = "28 Feb 26";
 
 	return (
-		<View>
+		<View style={styles.screen}>
 			{/* Top bar */}
-			<View>
+			<View style={styles.topBar}>
 				<TouchableOpacity onPress={() => router.back()}>
-					<Ionicons name="arrow-back" size={24} />
+					<Ionicons name="arrow-back" size={24} color="#e7e9ea" />
 				</TouchableOpacity>
-				<Text>Post</Text>
+				<Text style={styles.postheader}>Post</Text>
 			</View>
 
 			<ScrollView>
@@ -105,6 +105,12 @@ export default function PostDetail() {
 }
 
 const styles = StyleSheet.create({
+
+	screen: {
+			flex: 1,
+			backgroundColor:"#0e1117",
+			//backgroundColor: theme.colors.bg,
+		},
 	authorAvatar: {
 		width: 46,
 		height: 46,
@@ -118,4 +124,26 @@ const styles = StyleSheet.create({
 		fontWeight: "700",
 		fontSize: 17,
 	},
+
+	topBar: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 16,
+    paddingTop: 52,
+    paddingBottom: 12,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomColor: "#2f3336",
+	},
+
+	postheader: {
+		color: "white",
+		fontSize: 15,
+		fontWeight: "700",
+		position: "absolute",
+		left:0,
+		right:0,
+		textAlign: "center",
+	},
+
+
 });

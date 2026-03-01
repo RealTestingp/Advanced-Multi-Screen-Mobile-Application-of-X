@@ -1,13 +1,13 @@
 import { Ionicons } from "@expo/vector-icons";
 import React, { useState } from "react";
 import {
-  FlatList,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
+	FlatList,
+	ScrollView,
+	StyleSheet,
+	Text,
+	TextInput,
+	TouchableOpacity,
+	View,
 } from "react-native";
 import { theme } from "../../../styles/theme";
 
@@ -43,7 +43,7 @@ export default function Search() {
 						onChangeText={setQuery}
 					/>
 				</View>
-				<Ionicons name="settings-outline" size={24} />
+				<Ionicons name="settings-outline" size={24} color="white" />
 			</View>
 
 			{/* Tabs within Search */}
@@ -71,14 +71,14 @@ export default function Search() {
 				data={Trending}
 				keyExtractor={(item) => item.id}
 				renderItem={({ item }) => (
-					<View>
+					<View style={styles.trending}>
 						<View>
-							<Text>
+							<Text style={styles.topicText}>{item.topic}</Text>
+							<Text style={styles.titleText}>
 								{item.rank} · {item.category}
 							</Text>
-							<Text>{item.topic}</Text>
 						</View>
-						<Ionicons name="ellipsis-vertical" size={18} />
+						<Ionicons name="ellipsis-horizontal" size={18} color="#71767b" />
 					</View>
 				)}
 			/>
@@ -98,6 +98,7 @@ const styles = StyleSheet.create({
 		paddingTop: 52,
 		paddingBottom: 12,
 		gap: 10,
+		justifyContent: "space-between",
 	},
 	avatar: {
 		width: 34,
@@ -120,6 +121,7 @@ const styles = StyleSheet.create({
 		paddingHorizontal: 14,
 		paddingVertical: 9,
 		gap: 8,
+		backgroundColor: "#202326",
 	},
 	searchInput: {
 		flex: 1,
@@ -155,5 +157,28 @@ const styles = StyleSheet.create({
 		height: 3,
 		borderRadius: 2,
 		backgroundColor: "#1d9bf0",
+	},
+
+	trending:{
+		flexDirection: "row",
+		justifyContent: "space-between",
+		alignItems: "center",
+		paddingHorizontal: 16,
+		paddingVertical: 12,
+		borderBottomWidth: StyleSheet.hairlineWidth,
+		borderBottomColor: "#2f3336",
+	},
+
+	titleText:{
+		color: "#71767b",
+		fontSize: 15,
+		fontWeight: "400",
+	},
+
+	topicText:{
+		color: "white",
+		fontSize: 15,
+		fontWeight: "500",
+		marginTop: 2,
 	},
 });

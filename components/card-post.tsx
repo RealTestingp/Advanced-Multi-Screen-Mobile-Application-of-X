@@ -1,11 +1,10 @@
 import { useRouter } from "expo-router";
 import React from "react";
 import {
-  ImageSourcePropType,
-  Pressable,
-  StyleSheet,
-  Text,
-  View
+	Pressable,
+	StyleSheet,
+	Text,
+	View
 } from "react-native";
 
 type AppPostProps = {
@@ -74,7 +73,7 @@ const styles = StyleSheet.create({
 	userName: {
 		fontWeight: "700",
 		fontSize: 15,
-		color: "black",
+		color: "white",
 	},
 	userHandle: {
 		fontSize: 14,
@@ -83,7 +82,7 @@ const styles = StyleSheet.create({
 	postContent: {
 		fontSize: 15,
 		lineHeight: 22,
-		color: "black",
+		color: "white",
 	},
 	avatarInitial: {
 		color: "white",
