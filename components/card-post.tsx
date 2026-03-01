@@ -12,7 +12,6 @@ type AppPostProps = {
 	userName: string;
 	userHandle: `@${string}`;
 	postContent: string;
-	profileImage: ImageSourcePropType;
 };
 
 const CardPost = ({ userName, userHandle, postContent }: AppPostProps) => {
