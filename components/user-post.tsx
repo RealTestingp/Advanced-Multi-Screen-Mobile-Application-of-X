@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, ImageSourcePropType } from 'react-native'
 import React from 'react'
 import CardPost from './card-post'
 
-const UserProfile = () => {
+const UserPost = () => {
   const user1 = {
     userName: "John Doe",
     userHandle: "@johndoe" as `@${string}`,
@@ -38,6 +38,6 @@ const UserProfile = () => {
   )
 }
 
-export default UserProfile
+export default UserPost
 
 const styles = StyleSheet.create({})
