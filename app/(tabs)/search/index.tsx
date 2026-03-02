@@ -136,7 +136,6 @@ const styles = StyleSheet.create({
 	},
 	tabsContent: {
 		paddingHorizontal: 8,
-		
 	},
 	tabButton: {
 		paddingHorizontal: 16,
@@ -161,7 +160,7 @@ const styles = StyleSheet.create({
 		backgroundColor: "#1d9bf0",
 	},
 
-	trending:{
+	trending: {
 		flexDirection: "row",
 		justifyContent: "space-between",
 		alignItems: "center",
@@ -169,16 +168,15 @@ const styles = StyleSheet.create({
 		paddingVertical: 12,
 		borderBottomWidth: StyleSheet.hairlineWidth,
 		borderBottomColor: "#2f3336",
-	
 	},
 
-	titleText:{
+	titleText: {
 		color: "#71767b",
 		fontSize: 15,
 		fontWeight: "400",
 	},
 
-	topicText:{
+	topicText: {
 		color: "white",
 		fontSize: 15,
 		fontWeight: "500",

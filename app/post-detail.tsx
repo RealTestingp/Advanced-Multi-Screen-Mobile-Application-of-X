@@ -28,7 +28,9 @@ export default function PostDetail() {
 				<TouchableOpacity onPress={() => router.back()}>
 					<Ionicons name="arrow-back" size={24} color="#e7e9ea" />
 				</TouchableOpacity>
-				<Text style={styles.postheader} pointerEvents="none">Post</Text>
+				<Text style={styles.postheader} pointerEvents="none">
+					Post
+				</Text>
 			</View>
 
 			<ScrollView>
@@ -48,7 +50,7 @@ export default function PostDetail() {
 							<Text style={styles.sub}>{userHandle}</Text>
 						</View>
 						<TouchableOpacity style={styles.followbutton}>
-							<Text style={styles.buttonText}	>Follow</Text>
+							<Text style={styles.buttonText}>Follow</Text>
 						</TouchableOpacity>
 						<Ionicons name="ellipsis-vertical" size={20} color="#71767b" />
 					</View>
@@ -67,23 +69,23 @@ export default function PostDetail() {
 					{/* Action bar */}
 					<View style={styles.actionrow}>
 						<TouchableOpacity>
-							<Ionicons name="chatbubble-outline" size={24} color="#71767b"/>
+							<Ionicons name="chatbubble-outline" size={24} color="#71767b" />
 						</TouchableOpacity>
 						<TouchableOpacity>
 							<Ionicons name="repeat-outline" size={24} color="#71767b" />
 						</TouchableOpacity>
 						<TouchableOpacity onPress={() => setLiked((l) => !l)}>
 							<Ionicons
-									name={liked ? "heart" : "heart-outline"}
+								name={liked ? "heart" : "heart-outline"}
 								size={24}
 								color={liked ? "#f91880" : "#71767b"}
 							/>
 						</TouchableOpacity>
 						<TouchableOpacity>
-							<Ionicons  name="bookmark-outline" size={24} color="#71767b"/>
+							<Ionicons name="bookmark-outline" size={24} color="#71767b" />
 						</TouchableOpacity>
 						<TouchableOpacity>
-							<Ionicons name="share-social-outline" size={24} color="#71767b"/>
+							<Ionicons name="share-social-outline" size={24} color="#71767b" />
 						</TouchableOpacity>
 					</View>
 
@@ -91,7 +93,7 @@ export default function PostDetail() {
 					<View>
 						<TouchableOpacity style={styles.replyRow}>
 							<Text style={styles.sub}>Most relevant replies</Text>
-							<Ionicons name="chevron-down" size={18} color="#71767b"/>
+							<Ionicons name="chevron-down" size={18} color="#71767b" />
 						</TouchableOpacity>
 					</View>
 				</View>
@@ -100,19 +102,18 @@ export default function PostDetail() {
 			{/* Reply bar */}
 			<View style={styles.postreplay}>
 				<Text style={styles.reply}>Post your reply</Text>
-				<Ionicons name="camera-outline" size={24} color= "#1d9bf0" />
+				<Ionicons name="camera-outline" size={24} color="#1d9bf0" />
 			</View>
 		</View>
 	);
 }
 
 const styles = StyleSheet.create({
-
 	screen: {
-			flex: 1,
-			backgroundColor:"#0e1117",
-			//backgroundColor: theme.colors.bg,
-		},
+		flex: 1,
+		backgroundColor: "#0e1117",
+		//backgroundColor: theme.colors.bg,
+	},
 	authorAvatar: {
 		width: 46,
 		height: 46,
@@ -128,13 +129,13 @@ const styles = StyleSheet.create({
 	},
 
 	topBar: {
-    flexDirection: "row",
-    alignItems: "center",
-    paddingHorizontal: 16,
-    paddingTop: 52,
-    paddingBottom: 12,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: "#2f3336",
+		flexDirection: "row",
+		alignItems: "center",
+		paddingHorizontal: 16,
+		paddingTop: 52,
+		paddingBottom: 12,
+		borderBottomWidth: StyleSheet.hairlineWidth,
+		borderBottomColor: "#2f3336",
 	},
 
 	postheader: {
@@ -142,76 +143,73 @@ const styles = StyleSheet.create({
 		fontSize: 15,
 		fontWeight: "700",
 		position: "absolute",
-		left:0,
-		right:0,
+		left: 0,
+		right: 0,
 		textAlign: "center",
 	},
 
-	actionrow:{
-	flexDirection: "row",
-	justifyContent: "space-around",
-	alignItems: "center",
-	paddingVertical: 12,
-	paddingHorizontal: 14,
-	borderTopWidth: StyleSheet.hairlineWidth,
-	borderTopColor: "#2f3336",
-	borderBottomWidth: StyleSheet.hairlineWidth,
-	borderBottomColor: "#2f3336",
-	marginTop: 12,
-	marginBottom: 12,
-	marginRight: 16,
-	marginLeft: 16,
+	actionrow: {
+		flexDirection: "row",
+		justifyContent: "space-around",
+		alignItems: "center",
+		paddingVertical: 12,
+		paddingHorizontal: 14,
+		borderTopWidth: StyleSheet.hairlineWidth,
+		borderTopColor: "#2f3336",
+		borderBottomWidth: StyleSheet.hairlineWidth,
+		borderBottomColor: "#2f3336",
+		marginTop: 12,
+		marginBottom: 12,
+		marginRight: 16,
+		marginLeft: 16,
 	},
 
-
-	username:{
+	username: {
 		color: "white",
 		fontWeight: "700",
 		fontSize: 16,
 		paddingTop: 20,
 	},
 
-	sub:{
+	sub: {
 		color: "#71767b",
 		fontSize: 16,
-	
 	},
 
-	followbutton:{
+	followbutton: {
 		borderRadius: 20,
 		paddingHorizontal: 14,
 		paddingVertical: 6,
 		borderWidth: 1,
-		backgroundColor:"white",
+		backgroundColor: "white",
 		alignItems: "center",
 		justifyContent: "center",
-
 	},
 
-	buttonText:{
+	buttonText: {
 		color: "#0e1117",
 		fontWeight: "600",
 		fontSize: 14,
 	},
 
-	authorRow:{
+	authorRow: {
 		flexDirection: "row",
 		alignItems: "center",
 		gap: 12,
 		marginBottom: 12,
 		paddingHorizontal: 16,
 	},
-	nameRow:{
-	flexDirection: "row",
-	alignItems: "center",
-	gap: 6,
+	nameRow: {
+		flexDirection: "row",
+		alignItems: "center",
+		gap: 6,
 	},
-	
-	nameSection:{
-		flex:1,
+
+	nameSection: {
+		flex: 1,
 	},
-	
-	posttext:{ 
+
+	posttext: {
 		color: "white",
 		fontSize: 18,
 		lineHeight: 20,
@@ -219,15 +217,14 @@ const styles = StyleSheet.create({
 		marginBottom: 12,
 		marginRight: 16,
 		marginLeft: 16,
-		borderBottomWidth:StyleSheet.hairlineWidth,	
+		borderBottomWidth: StyleSheet.hairlineWidth,
 		borderBottomColor: "#2f3336",
 		paddingBottom: 12,
-		
 	},
-	
-	text:{
+
+	text: {
 		color: "#71767b",
-		fontSize:16,
+		fontSize: 16,
 		borderBottomWidth: StyleSheet.hairlineWidth,
 		borderBottomColor: "#2f3336",
 		paddingBottom: 12,
@@ -236,19 +233,19 @@ const styles = StyleSheet.create({
 		marginLeft: 16,
 	},
 
-	replyRow:{
+	replyRow: {
 		flexDirection: "row",
 		alignItems: "center",
 		gap: 6,
 		paddingHorizontal: 16,
 		paddingVertical: 12,
 		borderBottomWidth: StyleSheet.hairlineWidth,
-		borderBottomColor:  "#2f3336",
+		borderBottomColor: "#2f3336",
 		marginLeft: 16,
 		marginRight: 16,
 	},
 
-	postreplay:{
+	postreplay: {
 		flexDirection: "row",
 		alignItems: "flex-start",
 		paddingHorizontal: 16,
@@ -257,15 +254,9 @@ const styles = StyleSheet.create({
 		borderTopColor: "#204d4d",
 	},
 
-	reply:{
-		flex:1,
+	reply: {
+		flex: 1,
 		color: "#7a8086",
 		fontSize: 16,
 	},
-
-
-
-
-
-
 });

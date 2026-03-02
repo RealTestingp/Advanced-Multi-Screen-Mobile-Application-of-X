@@ -24,8 +24,7 @@ const NOTIFICATIONS = [
 		id: "2",
 		icon: "⚡",
 		isEmoji: true,
-		title:
-			"Lorem ipsum dolor sit amet.",
+		title: "Lorem ipsum dolor sit amet.",
 		sub: "Lorem ipsum dolor sit amet,  consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 		time: "3w",
 	},
@@ -49,7 +48,7 @@ export default function Notifications() {
 						<Text style={styles.avatarText}>ME</Text>
 					</View>
 					<Text style={styles.notificationheader}>Notifications</Text>
-					<Ionicons name="settings-outline" size={24} color="white"/>
+					<Ionicons name="settings-outline" size={24} color="white" />
 				</View>
 
 				<View style={styles.tabsRow}>
@@ -63,7 +62,7 @@ export default function Notifications() {
 							>
 								{tab}
 							</Text>
-							{activeTab === tab && <View style={styles.tabUnderline} />}
+							{activeTab === tab && <View style={styles.tabUnderLine} />}
 						</TouchableOpacity>
 					))}
 				</View>
@@ -77,11 +76,10 @@ export default function Notifications() {
 						) : (
 							<Ionicons name="logo-windows" size={24} />
 						)}
-						<View style={styles.content}	>
-
+						<View style={styles.content}>
 							<View style={styles.header}>
-							<Text style={styles.title}>{item.title}</Text>
-							{item.time && <Text style={styles.time}>{item.time}</Text>}
+								<Text style={styles.title}>{item.title}</Text>
+								{item.time && <Text style={styles.time}>{item.time}</Text>}
 							</View>
 							{item.sub && <Text style={styles.sub}>{item.sub}</Text>}
 						</View>
@@ -138,14 +136,14 @@ const styles = StyleSheet.create({
 		backgroundColor: "#1d9bf0",
 	},
 
-	topBar:{
-	flexDirection:"row",
-	justifyContent: "space-between",
-	position: "relative",
-	alignItems: "center",
-	paddingHorizontal: 16,
-	paddingTop: 52,
-	paddingBottom: 12,
+	topBar: {
+		flexDirection: "row",
+		justifyContent: "space-between",
+		position: "relative",
+		alignItems: "center",
+		paddingHorizontal: 16,
+		paddingTop: 52,
+		paddingBottom: 12,
 	},
 
 	notificationheader: {
@@ -153,14 +151,14 @@ const styles = StyleSheet.create({
 		fontSize: 15,
 		fontWeight: "700",
 		position: "absolute",
-		left:0,
-		right:0,
+		left: 0,
+		right: 0,
 		textAlign: "center",
 	},
 
 	title: {
-		flex:1,
-		marginRight:6,
+		flex: 1,
+		marginRight: 6,
 		fontSize: 15,
 		color: "white",
 	},
@@ -168,16 +166,12 @@ const styles = StyleSheet.create({
 	header: {
 		flexDirection: "row",
 		alignItems: "flex-start",
-		
 	},
-	
 
 	sub: {
 		fontSize: 14,
 		color: "#71767b",
-		
 	},
-
 
 	container: {
 		flexDirection: "row",
@@ -185,19 +179,16 @@ const styles = StyleSheet.create({
 		paddingVertical: 12,
 		borderBottomWidth: 1,
 		borderBottomColor: "#2f3336",
-		gap: 12,	
-		
+		gap: 12,
 	},
 
-
-	content:{
+	content: {
 		flex: 1,
 		gap: 4,
 	},
 
-
-	time:{
+	time: {
 		fontSize: 14,
 		color: "#71767b",
-	}
+	},
 });

@@ -1,11 +1,6 @@
 import { useRouter } from "expo-router";
 import React from "react";
-import {
-	Pressable,
-	StyleSheet,
-	Text,
-	View
-} from "react-native";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 
 type AppPostProps = {
 	userName: string;

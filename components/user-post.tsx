@@ -8,7 +8,6 @@ const UserPost = () => {
 		userHandle: "@johndoe" as `@${string}`,
 		postContent:
 			"lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-	
 	};
 	const user2 = {
 		userName: "Jane Smith",
@@ -35,12 +34,18 @@ const UserPost = () => {
 			<CardPost {...user2} />
 			<CardPost {...user3} />
 			<CardPost {...user4} />
+			<CardPost {...user1} />
+			<CardPost {...user2} />
+			<CardPost {...user3} />
+			<CardPost {...user4} />
+			<CardPost {...user1} />
+			<CardPost {...user2} />
+			<CardPost {...user3} />
+			<CardPost {...user4} />
 		</View>
 	);
 };
 
 export default UserPost;
 
-const styles = StyleSheet.create({
-
-});
+const styles = StyleSheet.create({});
