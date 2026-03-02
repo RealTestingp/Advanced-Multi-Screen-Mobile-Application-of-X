@@ -63,6 +63,7 @@ export default function Notifications() {
 							>
 								{tab}
 							</Text>
+							{activeTab === tab && <View style={styles.tabUnderline} />}
 						</TouchableOpacity>
 					))}
 				</View>
