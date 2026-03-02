@@ -128,11 +128,11 @@ const styles = StyleSheet.create({
 	tabTextActive: {
 		color: "#e7e9ea",
 	},
-	tabUnderline: {
+	tabUnderLine: {
 		position: "absolute",
 		bottom: 0,
-		left: "25%",
-		right: "25%",
+		left: 16,
+		right: 16,
 		height: 3,
 		borderRadius: 2,
 		backgroundColor: "#1d9bf0",

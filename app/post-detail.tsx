@@ -28,7 +28,7 @@ export default function PostDetail() {
 				<TouchableOpacity onPress={() => router.back()}>
 					<Ionicons name="arrow-back" size={24} color="#e7e9ea" />
 				</TouchableOpacity>
-				<Text style={styles.postheader}>Post</Text>
+				<Text style={styles.postheader} pointerEvents="none">Post</Text>
 			</View>
 
 			<ScrollView>
