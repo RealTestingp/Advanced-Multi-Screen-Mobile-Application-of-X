@@ -46,7 +46,7 @@ export default function Notifications() {
 			<View>
 				<View style={styles.topBar}>
 					<View style={styles.avatar}>
-						<Text style={styles.avatarText}>Me</Text>
+						<Text style={styles.avatarText}>ME</Text>
 					</View>
 					<Text style={styles.notificationheader}>Notifications</Text>
 					<Ionicons name="settings-outline" size={24} color="white"/>
@@ -63,6 +63,7 @@ export default function Notifications() {
 							>
 								{tab}
 							</Text>
+							{activeTab === tab && <View style={styles.tabUnderline} />}
 						</TouchableOpacity>
 					))}
 				</View>
@@ -137,14 +138,6 @@ const styles = StyleSheet.create({
 		backgroundColor: "#1d9bf0",
 	},
 
-	headerrow:{
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "space-between",
-	
-
-	},
-
 	topBar:{
 	flexDirection:"row",
 	justifyContent: "space-between",
@@ -202,7 +195,6 @@ const styles = StyleSheet.create({
 		gap: 4,
 	},
 
-	
 
 	time:{
 		fontSize: 14,
