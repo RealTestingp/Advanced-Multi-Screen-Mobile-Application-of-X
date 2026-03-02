@@ -34,71 +34,73 @@ export default function PostDetail() {
 			<ScrollView>
 				<View>
 					{/* Post Author */}
-					<View>
+					<View style={styles.authorRow}>
 						<View style={styles.authorAvatar}>
 							<Text style={styles.avatarInitial}>
 								{userName?.charAt(0) ?? "?"}
 							</Text>
 						</View>
-						<View>
-							<View>
-								<Text>{userName}</Text>
-								<Ionicons name="checkmark-circle" size={16} />
+						<View style={styles.nameSection}>
+							<View style={styles.nameRow}>
+								<Text style={styles.username}>{userName}</Text>
+								<Ionicons name="checkmark-circle" size={16} color="#1d9bf0" />
 							</View>
-							<Text>{userHandle}</Text>
+							<Text style={styles.sub}>{userHandle}</Text>
 						</View>
-						<TouchableOpacity>
-							<Text>Follow</Text>
+						<TouchableOpacity style={styles.followbutton}>
+							<Text style={styles.buttonText}	>Follow</Text>
 						</TouchableOpacity>
-						<Ionicons name="ellipsis-horizontal" size={20} />
+						<Ionicons name="ellipsis-vertical" size={20} color="#71767b" />
 					</View>
 
 					{/* Post body */}
-					<Text>{postContent}</Text>
+					<Text style={styles.posttext}>{postContent}</Text>
 
 					{/* Timestamp & views */}
-					<Text>
+					<Text style={styles.text}>
 						{timeString} · {dateString} · 69 Views
 					</Text>
 
 					{/* Stats */}
-					<Text>1 Like</Text>
+					<Text style={styles.posttext}>1 Like</Text>
 
 					{/* Action bar */}
-					<View>
+					<View style={styles.actionrow}>
 						<TouchableOpacity>
-							<Ionicons name="chatbubble-outline" size={24} />
+							<Ionicons name="chatbubble-outline" size={24} color="#71767b"/>
 						</TouchableOpacity>
 						<TouchableOpacity>
-							<Ionicons name="repeat-outline" size={24} />
+							<Ionicons name="repeat-outline" size={24} color="#71767b" />
 						</TouchableOpacity>
 						<TouchableOpacity onPress={() => setLiked((l) => !l)}>
 							<Ionicons
-								name={liked ? "heart" : "heart-outline"}
+									name={liked ? "heart" : "heart-outline"}
 								size={24}
-								color={liked ? "#f91880" : undefined}
+								color={liked ? "#f91880" : "#71767b"}
 							/>
 						</TouchableOpacity>
 						<TouchableOpacity>
-							<Ionicons name="bookmark-outline" size={24} />
+							<Ionicons  name="bookmark-outline" size={24} color="#71767b"/>
 						</TouchableOpacity>
 						<TouchableOpacity>
-							<Ionicons name="share-social-outline" size={24} />
+							<Ionicons name="share-social-outline" size={24} color="#71767b"/>
 						</TouchableOpacity>
 					</View>
 
 					{/* Most relevant replies */}
 					<View>
-						<Text>Most relevant replies</Text>
-						<Ionicons name="chevron-down" size={18} />
+						<TouchableOpacity style={styles.replyRow}>
+							<Text style={styles.sub}>Most relevant replies</Text>
+							<Ionicons name="chevron-down" size={18} color="#71767b"/>
+						</TouchableOpacity>
 					</View>
 				</View>
 			</ScrollView>
 
 			{/* Reply bar */}
-			<View>
-				<Text>Post your reply</Text>
-				<Ionicons name="camera-outline" size={24} />
+			<View style={styles.postreplay}>
+				<Text style={styles.reply}>Post your reply</Text>
+				<Ionicons name="camera-outline" size={24} color= "#1d9bf0" />
 			</View>
 		</View>
 	);
@@ -144,6 +146,126 @@ const styles = StyleSheet.create({
 		right:0,
 		textAlign: "center",
 	},
+
+	actionrow:{
+	flexDirection: "row",
+	justifyContent: "space-around",
+	alignItems: "center",
+	paddingVertical: 12,
+	paddingHorizontal: 14,
+	borderTopWidth: StyleSheet.hairlineWidth,
+	borderTopColor: "#2f3336",
+	borderBottomWidth: StyleSheet.hairlineWidth,
+	borderBottomColor: "#2f3336",
+	marginTop: 12,
+	marginBottom: 12,
+	marginRight: 16,
+	marginLeft: 16,
+	},
+
+
+	username:{
+		color: "white",
+		fontWeight: "700",
+		fontSize: 16,
+		paddingTop: 20,
+	},
+
+	sub:{
+		color: "#71767b",
+		fontSize: 16,
+	
+	},
+
+	followbutton:{
+		borderRadius: 20,
+		paddingHorizontal: 14,
+		paddingVertical: 6,
+		borderWidth: 1,
+		backgroundColor:"white",
+		alignItems: "center",
+		justifyContent: "center",
+
+	},
+
+	buttonText:{
+		color: "#0e1117",
+		fontWeight: "600",
+		fontSize: 14,
+	},
+
+	authorRow:{
+		flexDirection: "row",
+		alignItems: "center",
+		gap: 12,
+		marginBottom: 12,
+		paddingHorizontal: 16,
+	},
+	nameRow:{
+	flexDirection: "row",
+	alignItems: "center",
+	gap: 6,
+	},
+	
+	nameSection:{
+		flex:1,
+	},
+	
+	posttext:{ 
+		color: "white",
+		fontSize: 18,
+		lineHeight: 20,
+
+		marginBottom: 12,
+		marginRight: 16,
+		marginLeft: 16,
+		borderBottomWidth:StyleSheet.hairlineWidth,	
+		borderBottomColor: "#2f3336",
+		paddingBottom: 12,
+		
+	},
+	
+	text:{
+		color: "#71767b",
+		fontSize:16,
+		borderBottomWidth: StyleSheet.hairlineWidth,
+		borderBottomColor: "#2f3336",
+		paddingBottom: 12,
+		marginBottom: 12,
+		marginRight: 16,
+		marginLeft: 16,
+	},
+
+	replyRow:{
+		flexDirection: "row",
+		alignItems: "center",
+		gap: 6,
+		paddingHorizontal: 16,
+		paddingVertical: 12,
+		borderBottomWidth: StyleSheet.hairlineWidth,
+		borderBottomColor:  "#2f3336",
+		marginLeft: 16,
+		marginRight: 16,
+	},
+
+	postreplay:{
+		flexDirection: "row",
+		alignItems: "flex-start",
+		paddingHorizontal: 16,
+		paddingVertical: 12,
+		borderTopWidth: StyleSheet.hairlineWidth,
+		borderTopColor: "#204d4d",
+	},
+
+	reply:{
+		flex:1,
+		color: "#7a8086",
+		fontSize: 16,
+	},
+
+
+
+
 
 
 });

@@ -78,7 +78,7 @@ export default function Search() {
 								{item.rank} · {item.category}
 							</Text>
 						</View>
-						<Ionicons name="ellipsis-horizontal" size={18} color="#71767b" />
+						<Ionicons name="ellipsis-vertical" size={18} color="#71767b" />
 					</View>
 				)}
 			/>
@@ -129,12 +129,14 @@ const styles = StyleSheet.create({
 		fontSize: 16,
 	},
 	tabsRow: {
+		paddingBottom: 12,
 		borderBottomWidth: StyleSheet.hairlineWidth,
 		borderBottomColor: "#2f3336",
 		flexGrow: 0,
 	},
 	tabsContent: {
 		paddingHorizontal: 8,
+		
 	},
 	tabButton: {
 		paddingHorizontal: 16,
@@ -167,6 +169,7 @@ const styles = StyleSheet.create({
 		paddingVertical: 12,
 		borderBottomWidth: StyleSheet.hairlineWidth,
 		borderBottomColor: "#2f3336",
+	
 	},
 
 	titleText:{
